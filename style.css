@@ -46,13 +46,13 @@ section {
 .task {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 .input_task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .adding__form {
@@ -154,7 +154,7 @@ li > label {
 }
 
 li > input[type="text"] {
-    width: 226px
+    width: 226px;
 }
 
 .button__img {
@@ -176,12 +176,12 @@ li > input[type="text"] {
 /* Edit Task */
 
 ul li input[type=text] {
-    display: none
+    display: none;
 }
 
 ul li.todo__edit input[type=text] {
     display: inline-block;
-    width: 224px
+    width: 224px;
 }
 
 ul li.todo__edit label {
