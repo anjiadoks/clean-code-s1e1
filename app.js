@@ -8,9 +8,9 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("adding__form__task");//Add a new task.
+var taskInput=document.getElementById("add__task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("todo__list");//ul of #incompleteTasks
+var incompleteTaskHolder=document.getElementById("todo__tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed__tasks");//completed-tasks
 
 
@@ -32,13 +32,16 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.className="task__item";
+
     label.innerText=taskString;
-    label.className='task';
+    label.className="task__label";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="task__checkbox";
     editInput.type="text";
-    editInput.className="input_task";
+    editInput.className="task__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="button_edit";
@@ -85,11 +88,11 @@ var editTask=function(){
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".button_edit");
-    var containsClass=listItem.classList.contains("todo__edit");
-    //If class of the parent is .todo__edit
+    var containsClass=listItem.classList.contains("task__item_edit");
+    //If class of the parent is .editmode
     if(containsClass){
 
-        //switch to .todo__edit
+        //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -98,8 +101,8 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .todo__edit on the parent.
-    listItem.classList.toggle("todo__edit");
+    //toggle .editmode on the parent.
+    listItem.classList.toggle("task__item_edit");
 };
 
 

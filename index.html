@@ -14,24 +14,24 @@
       <section id="adding" class="adding">
         <h3 class="title title_first">Add Item</h3>
         <form class="adding__form">
-          <input id="adding__task" class="adding__task input input_task" type="text">
+          <input id="add__task" class="adding__task" type="text">
           <button>Add</button>
         </form>
       </section>
       <section id="todo" class="todo">
         <h3 class="title">Todo</h3>
-        <ul id="todo__list">
-          <li class="todo__item">
-            <input type="checkbox">
-            <label class="todo__input label input_task">Pay Bills</label>
-            <input type="text" class="todo__input input input_task">
+        <ul class="task" id="todo__tasks">
+          <li class="task__item">
+            <input type="checkbox" class="task__checkbox">
+            <label class="task__label">Pay Bills</label>
+            <input type="text" class="task__input">
             <button class="todo__button button button_edit">Edit</button>
             <button class="todo__button button button_delete"><img src="./remove.svg" class="button__img" alt=""></button>
           </li>
-          <li class="todo__edit">
-            <input type="checkbox">
-            <label class="todo__input input input_task">Go Shopping</label>
-            <input type="text" value="Go Shopping" class="todo__input input input_task">
+          <li class="task__item task__item_edit">
+            <input type="checkbox" class="task__checkbox">
+            <label class="task__label">Go Shopping</label>
+            <input type="text" value="Go Shopping" class="task__input">
             <button class="todo__button button button_edit">Save</button>
             <button class="todo__button button button_delete"><img src="./remove.svg" class="button__img" alt=""></button>
           </li>
@@ -39,11 +39,11 @@
       </section>
       <section id="completed" class="completed">
         <h3 class="title">Completed</h3>
-        <ul id="completed__tasks">
-          <li class="completed__item">
-            <input type="checkbox" checked>
-            <label class="completed__input input input_task">See the Doctor</label>
-            <input type="text" class="completed__input input input_task">
+        <ul id="completed__tasks" class="task second_task">
+          <li class="task__item">
+            <input type="checkbox" class="task__checkbox" checked>
+            <label class="task__label">See the Doctor</label>
+            <input type="text" class="task__input">
             <button class="completed__button button button_edit">Edit</button>
             <button class="completed__button button button_delete"><img src="./remove.svg" class="button__img" alt=""></button>
           </li>
